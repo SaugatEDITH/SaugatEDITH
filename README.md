@@ -16,7 +16,7 @@
 - 📫 Reach me at **github@saikripa.com.np**
 - ⚡ Fun fact **One man’s backdoor is another man’s undocumented feature.**
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="center">Connect with me:</h3>
 <table align="center"><tr>
 <td align="center"><a href="https://twitter.com/saugat1111" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="saugat1111" height="30" width="40" /></a></td>
 <td align="center"><a href="https://linkedin.com/in/saugat-pokharel-63390323a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="saugat-pokharel-63390323a" height="30" width="40" /></a></td>

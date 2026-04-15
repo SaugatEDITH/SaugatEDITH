@@ -17,15 +17,15 @@
 - ⚡ Fun fact **One man’s backdoor is another man’s undocumented feature.**
 
 <h3 align="left">Connect with me:</h3>
-<table><tr>
+<table align="center"><tr>
 <td align="center"><a href="https://twitter.com/saugat1111" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="saugat1111" height="30" width="40" /></a></td>
 <td align="center"><a href="https://linkedin.com/in/saugat-pokharel-63390323a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="saugat-pokharel-63390323a" height="30" width="40" /></a></td>
 <td align="center"><a href="https://fb.com/saugat1111" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="saugat1111" height="30" width="40" /></a></td>
 <td align="center"><a href="https://instagram.com/saugatedith" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="saugatedith" height="30" width="40" /></a></td>
 </tr></table>
 
-<h3 align="left">Core Arsenal</h3>
-<table><tr>
+<h3 align="center">Core Arsenal</h3>
+<table align="center"><tr>
 <td align="center"><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="48" height="48"/></a></td>
 <td align="center"><a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="48" height="48"/></a></td>
 <td align="center"><a href="https://www.python.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="48" height="48"/></a></td>

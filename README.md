@@ -76,14 +76,14 @@ class SaugatPokharel:
 
 <div align="center">
 
-<!-- Stats cards generated locally by GitHub Actions — always fresh -->
-<img src="./profile/stats.svg" width="49%" alt="GitHub Stats"/>
-<img src="./profile/top-langs.svg" width="49%" alt="Top Languages"/>
+<!-- Stats cards generated dynamically -->
+<img src="https://github-readme-stats.vercel.app/api?username=SaugatEDITH&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=6e40c9&icon_color=58a6ff&text_color=c9d1d9" width="49%" alt="GitHub Stats"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SaugatEDITH&layout=compact&hide_border=true&bg_color=0d1117&title_color=6e40c9&text_color=c9d1d9&langs_count=8" width="49%" alt="Top Languages"/>
 
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="https://streak-stats.demolab.com?user=saugatedith&theme=tokyonight-duo&hide_border=true&background=0D1117&stroke=6e40c9&ring=6e40c9&fire=58a6ff&currStreakLabel=6e40c9&sideNums=c9d1d9&currStreakNum=ffffff&dates=58a6ff&sideLabels=58a6ff" alt="GitHub Streak" />
+<img src="https://github-readme-streak-stats.herokuapp.com?user=SaugatEDITH&theme=tokyonight-duo&hide_border=true&background=0D1117&stroke=6e40c9&ring=6e40c9&fire=58a6ff&currStreakLabel=6e40c9&sideNums=c9d1d9&currStreakNum=ffffff&dates=58a6ff&sideLabels=58a6ff" alt="GitHub Streak" />
 
 </div>
 
@@ -92,7 +92,7 @@ class SaugatPokharel:
 ## 🏆 GitHub Trophies
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=saugatedith&theme=tokyonight&no-frame=true&margin-w=10&margin-h=10&column=7" alt="Trophies"/>
+  <img src="./profile/trophy.svg" alt="Trophies"/>
 </div>
 
 ---
@@ -102,11 +102,8 @@ class SaugatPokharel:
 <div align="center">
 
 <!-- Auto-generated via GitHub Actions every 12 hours -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake-dark.svg" />
-</picture>
+<img src="https://raw.githubusercontent.com/SaugatEDITH/SaugatEDITH/output/github-snake-dark.svg#gh-dark-mode-only" alt="github-snake" />
+<img src="https://raw.githubusercontent.com/SaugatEDITH/SaugatEDITH/output/github-snake.svg#gh-light-mode-only" alt="github-snake" />
 
 </div>
 

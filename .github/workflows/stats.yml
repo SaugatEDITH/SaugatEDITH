@@ -29,8 +29,15 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: top-langs
-          options: 'username=saugatedith&layout=compact&hide_border=true&bg_color=0d1117&title_color=6e40c9&text_color=c9d1d9&langs_count=8'
+          options: 'username=SaugatEDITH&layout=compact&hide_border=true&bg_color=0d1117&title_color=6e40c9&text_color=c9d1d9&langs_count=8'
           path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Trophy Card
+        uses: soulteary/github-profile-trophy-action@v1.0.0
+        with:
+          options: 'username=SaugatEDITH&theme=tokyonight&no-frame=true&margin-w=10&margin-h=10&column=7'
+          path: profile/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated cards

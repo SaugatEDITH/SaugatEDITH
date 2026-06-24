@@ -76,12 +76,13 @@ class SaugatPokharel:
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=saugatedith&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=6e40c9&icon_color=58a6ff&text_color=c9d1d9" width="49%" alt="Stats"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saugatedith&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6e40c9&text_color=c9d1d9&langs_count=8" width="49%" alt="Languages"/>
+<!-- Stats cards generated locally by GitHub Actions — always fresh -->
+<img src="./profile/stats.svg" width="49%" alt="GitHub Stats"/>
+<img src="./profile/top-langs.svg" width="49%" alt="Top Languages"/>
 
 <br/><br/>
 
-<!-- STREAK STATS - using alternative provider that's more reliable -->
+<!-- STREAK STATS -->
 <img src="https://streak-stats.demolab.com?user=saugatedith&theme=tokyonight-duo&hide_border=true&background=0D1117&stroke=6e40c9&ring=6e40c9&fire=58a6ff&currStreakLabel=6e40c9&sideNums=c9d1d9&currStreakNum=ffffff&dates=58a6ff&sideLabels=58a6ff" alt="GitHub Streak" />
 
 </div>
@@ -100,26 +101,40 @@ class SaugatPokharel:
 
 <div align="center">
 
-<!-- This snake is auto-generated via GitHub Actions - see setup instructions below -->
+<!-- Auto-generated via GitHub Actions every 12 hours -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake-dark.svg" />
 </picture>
-
-<!-- FALLBACK: If snake isn't set up yet, this animated grid shows instead -->
-<!-- Remove the picture tags above and uncomment the line below as a fallback: -->
-<!-- <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake eating my contributions" /> -->
 
 </div>
 
 ---
 
-<!-- ## 🎮 Tetris — Watch it play itself! -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="35%" valign="middle" align="center">
+      <img src="./tetris.svg" alt="Self Playing Tetris" width="260" />
+    </td>
+    <td width="65%" valign="middle" align="left">
+      <br/>
+      <pre><code><b>root@saugat:~$</b> whoami
+ethical_hacker | ai_builder | architect
 
-<div align="center">
-  <img src="tetris.svg" alt="Tetris game playing on my profile" />
-</div>
+<b>root@saugat:~$</b> cat core_directives.txt
+> Forge unbreakable digital fortresses
+> Turn caffeine into exploits & code
+> Automate the boring stuff with AI
+
+<b>root@saugat:~$</b> ./run_ai_tetris.sh
+[+] CSS Animation Engine... [OK]
+[+] Calculating perfect drops... [OK]
+[+] Executing payload on the left...
+</code></pre>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -167,47 +182,3 @@ class SaugatPokharel:
 **⭐ If you found my work useful, please consider starring my repos!**
 
 </div>
-
----
-
-<!-- ═══════════════════════════════════════════════════════
-     🐍 SNAKE SETUP — READ ME (one-time 5 min setup)
-     ═══════════════════════════════════════════════════════
-
-To activate the live contribution snake animation:
-
-1. Create a new file in your repo:
-   .github/workflows/snake.yml
-
-2. Paste this content into it:
-
-   name: Generate Snake
-   on:
-     schedule:
-       - cron: "0 */12 * * *"
-     workflow_dispatch:
-   jobs:
-     generate:
-       runs-on: ubuntu-latest
-       steps:
-         - uses: actions/checkout@v3
-         - uses: Platane/snk@v3
-           with:
-             github_user_name: saugatedith
-             outputs: |
-               dist/github-snake.svg
-               dist/github-snake-dark.svg?palette=github-dark
-         - uses: crazy-max/ghaction-github-pages@v3
-           with:
-             target_branch: output
-             build_dir: dist
-           env:
-             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-3. Go to repo Settings → Actions → General → Allow GitHub Actions to create PRs
-
-4. Manually trigger the action once from the Actions tab.
-
-The snake SVG will auto-generate every 12 hours! ✅
-
-═══════════════════════════════════════════════════════ -->

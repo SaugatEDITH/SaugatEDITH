@@ -109,12 +109,14 @@ class SaugatPokharel:
 
 ---
 
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<div align="center">
+<table border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td width="35%" valign="middle" align="center">
+    <td valign="middle" align="center">
       <img src="./tetris.svg" alt="Self Playing Tetris" width="260" />
     </td>
-    <td width="65%" valign="middle" align="left">
+    <td width="40"></td>
+    <td valign="middle" align="left">
       <br/>
       <pre><code><b>root@saugat:~$</b> whoami
 ethical_hacker | ai_builder | architect
@@ -132,6 +134,7 @@ ethical_hacker | ai_builder | architect
     </td>
   </tr>
 </table>
+</div>
 
 ---
 

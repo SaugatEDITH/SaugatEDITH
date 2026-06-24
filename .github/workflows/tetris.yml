@@ -1,0 +1,21 @@
+name: Tetris
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # runs every 3 hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  tetris:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: bdlukaa/tetris@latest
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "🎮 Tetris auto-move"
+          tetris-state-file: tetris-state.json
+          tetris-image-file: tetris.svg

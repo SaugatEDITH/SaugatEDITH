@@ -1,54 +1,213 @@
-<h1 align="center">Hi 👋, I'm Saugat Pokharel</h1>
+<div align="center">
 
-<h3 align="center">Full Stack Alchemist • Cybersecurity Sentinel • AI Explorer</h3>
+<!-- ANIMATED HEADER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:6e40c9,100:58a6ff&height=200&section=header&text=Saugat%20Pokharel&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Alchemist%20%E2%80%A2%20Cybersecurity%20Sentinel%20%E2%80%A2%20AI%20Explorer&descAlignY=58&descSize=16" />
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=saugatedith&label=Profile%20views&color=0e75b6&style=flat" alt="saugatedith" />
-</p>
+<!-- TYPING ANIMATION -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=800&color=6e40c9&center=true&vCenter=true&multiline=true&width=750&height=80&lines=I+don't+just+code+%E2%80%94+I+forge+digital+fortresses.;Ethical+hacker+%F0%9F%8C%99+%7C+Full-stack+architect+%E2%98%80%EF%B8%8F+%7C+AI+builder" alt="Typing SVG" />
+</a>
+<br/>
 
-<p align="center">
-  I don’t just code — I forge secure, intelligent digital fortresses. From pixel-perfect React frontends to bulletproof Django backends and AI-powered systems, I build what others only dream of. Ethical hacker by night, full-stack architect by day.
-</p>
+<!-- PROFILE VIEWS + BADGES -->
+<a href="https://github.com/saugatedith"><img src="https://komarev.com/ghpvc/?username=saugatedith&label=Profile+Views&color=6e40c9&style=for-the-badge" alt="Profile Views"/></a>
+&nbsp;
+<a href="https://saikripa.com.np/"><img src="https://img.shields.io/badge/Portfolio-saikripa.com.np-6e40c9?style=for-the-badge&logo=vercel&logoColor=white"/></a>
+&nbsp;
+<a href="mailto:github@saikripa.com.np"><img src="https://img.shields.io/badge/Email-github%40saikripa.com.np-58a6ff?style=for-the-badge&logo=gmail&logoColor=white"/></a>
 
-- 🔭 Currently forging **React + Django REST Framework** with AI intelligence baked in
-- 👨‍💻 All of my projects live at **[saikripa.com.np](https://saikripa.com.np/)**
-- 💬 Ask me about **Full-Stack Architecture, Cybersecurity, or AI Systems**
-- 📫 Reach me at **github@saikripa.com.np**
-- ⚡ Fun fact **One man’s backdoor is another man’s undocumented feature.**
+</div>
 
-<h3 align="center">Connect with me:</h3>
-<table align="center"><tr>
-<td align="center"><a href="https://twitter.com/saugat1111" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="saugat1111" height="30" width="40" /></a></td>
-<td align="center"><a href="https://linkedin.com/in/saugat-pokharel-63390323a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="saugat-pokharel-63390323a" height="30" width="40" /></a></td>
-<td align="center"><a href="https://fb.com/saugat1111" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="saugat1111" height="30" width="40" /></a></td>
-<td align="center"><a href="https://instagram.com/saugatedith" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="saugatedith" height="30" width="40" /></a></td>
-</tr></table>
+---
 
-<h3 align="center">Core Arsenal</h3>
-<table align="center"><tr>
-<td align="center"><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="48" height="48"/></a></td>
-<td align="center"><a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"><img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="48" height="48"/></a></td>
-<td align="center"><a href="https://www.python.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="48" height="48"/></a></td>
-<td align="center"><a href="https://nodejs.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="48" height="48"/></a></td>
-<td align="center"><a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="48" height="48"/></a></td>
-<td align="center"><a href="https://www.postgresql.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="48" height="48"/></a></td>
-<td align="center"><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="48" height="48"/></a></td>
-<td align="center"><a href="https://git-scm.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="48" height="48"/></a></td>
-<td align="center"><a href="https://www.linux.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="48" height="48"/></a></td>
-<td align="center"><a href="https://opencv.org/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="48" height="48"/></a></td>
-<td align="center"><a href="https://www.pytorch.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="pytorch" width="48" height="48"/></a></td>
-</tr></table>
+## 🧬 Who Am I?
 
-<h3 align="left">GitHub Legends</h3>
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=saugatedith&theme=radical&no-frame=true&margin-w=15" alt="saugatedith" />
-</p>
+```python
+class SaugatPokharel:
+    name        = "Saugat Pokharel"
+    location    = "Hetauda, Nepal 🇳🇵"
+    stack       = ["React", "JavaScript", "Django REST", "Python", "PostgreSQL", "Docker"]
+    interests   = ["Full-Stack Architecture", "Cybersecurity", "AI/ML Systems"]
+    currently   = "Forging React + Django REST + AI-powered systems"
+    philosophy  = "One man's backdoor is another man's undocumented feature."
+    open_to     = ["Collaboration", "Freelance", "Open Source"]
+    portfolio   = "https://saikripa.com.np/"
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=saugatedith&show_icons=true&locale=en&theme=radical&hide_border=true" alt="saugatedith" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=saugatedith&show_icons=true&locale=en&layout=compact&theme=radical&hide_border=true" alt="saugatedith" />
-</p>
+    def current_focus(self):
+        return ["Building secure full-stack apps",
+                "Ethical hacking & pentesting",
+                "Integrating AI into real products"]
+```
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=saugatedith&theme=radical&hide_border=true" alt="saugatedith" />
-</p>
+---
+
+## ⚔️ Core Arsenal
+
+<div align="center">
+
+### 🖥️ Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+### ⚙️ Backend
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+
+### 🤖 AI / ML
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+### 🔐 Security & DevOps
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
+
+</div>
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=saugatedith&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=6e40c9&icon_color=58a6ff&text_color=c9d1d9" width="49%" alt="Stats"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=saugatedith&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=6e40c9&text_color=c9d1d9&langs_count=8" width="49%" alt="Languages"/>
+
+<br/><br/>
+
+<!-- STREAK STATS - using alternative provider that's more reliable -->
+<img src="https://streak-stats.demolab.com?user=saugatedith&theme=tokyonight-duo&hide_border=true&background=0D1117&stroke=6e40c9&ring=6e40c9&fire=58a6ff&currStreakLabel=6e40c9&sideNums=c9d1d9&currStreakNum=ffffff&dates=58a6ff&sideLabels=58a6ff" alt="GitHub Streak" />
+
+</div>
+
+---
+
+## 🏆 GitHub Trophies
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=saugatedith&theme=tokyonight&no-frame=true&margin-w=10&margin-h=10&column=7" alt="Trophies"/>
+</div>
+
+---
+
+## 🐍 Contribution Snake
+
+<div align="center">
+
+<!-- This snake is auto-generated via GitHub Actions - see setup instructions below -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/saugatedith/saugatedith/output/github-snake.svg" />
+</picture>
+
+<!-- FALLBACK: If snake isn't set up yet, this animated grid shows instead -->
+<!-- Remove the picture tags above and uncomment the line below as a fallback: -->
+<!-- <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake eating my contributions" /> -->
+
+</div>
+
+---
+
+<!-- ## 🎮 Tetris — Watch it play itself! -->
+
+<div align="center">
+  <img src="tetris.svg" alt="Tetris game playing on my profile" />
+</div>
+
+---
+
+## 🌐 Connect With Me
+
+<div align="center">
+
+<a href="https://twitter.com/saugat1111" target="_blank">
+  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+</a>
+&nbsp;
+<a href="https://linkedin.com/in/saugat-pokharel-63390323a" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+&nbsp;
+<a href="https://fb.com/saugat1111" target="_blank">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
+</a>
+&nbsp;
+<a href="https://instagram.com/saugatedith" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+</a>
+&nbsp;
+<a href="https://saikripa.com.np/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-6e40c9?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+</a>
+
+</div>
+
+---
+
+## 💡 Fun Fact
+
+> *"One man's backdoor is another man's undocumented feature."*
+>
+> — Saugat Pokharel, Ethical Hacker & Full Stack Architect
+
+---
+
+<div align="center">
+
+<!-- FOOTER WAVE -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:58a6ff,50:6e40c9,100:0d1117&height=120&section=footer" />
+
+**⭐ If you found my work useful, please consider starring my repos!**
+
+</div>
+
+---
+
+<!-- ═══════════════════════════════════════════════════════
+     🐍 SNAKE SETUP — READ ME (one-time 5 min setup)
+     ═══════════════════════════════════════════════════════
+
+To activate the live contribution snake animation:
+
+1. Create a new file in your repo:
+   .github/workflows/snake.yml
+
+2. Paste this content into it:
+
+   name: Generate Snake
+   on:
+     schedule:
+       - cron: "0 */12 * * *"
+     workflow_dispatch:
+   jobs:
+     generate:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v3
+         - uses: Platane/snk@v3
+           with:
+             github_user_name: saugatedith
+             outputs: |
+               dist/github-snake.svg
+               dist/github-snake-dark.svg?palette=github-dark
+         - uses: crazy-max/ghaction-github-pages@v3
+           with:
+             target_branch: output
+             build_dir: dist
+           env:
+             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+3. Go to repo Settings → Actions → General → Allow GitHub Actions to create PRs
+
+4. Manually trigger the action once from the Actions tab.
+
+The snake SVG will auto-generate every 12 hours! ✅
+
+═══════════════════════════════════════════════════════ -->

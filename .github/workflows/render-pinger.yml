@@ -1,0 +1,82 @@
+name: Keep Render Apps Awake
+
+on:
+  schedule:
+    # Every 5 minutes, 24/7. GitHub's scheduler is best-effort and can slip by
+    # several minutes under load, so we ping well inside Render's 15-min sleep
+    # window rather than right up against it.
+    - cron: '*/5 * * * *'
+  workflow_dispatch:   # lets you trigger a test run manually from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  ping-apps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Check Nepal time and ping apps in their active windows
+        shell: python
+        run: |
+          import datetime
+          import urllib.request
+          import urllib.error
+
+          # ---- One line per app: name, URL, active-hours window (Nepal time, 24h) ----
+          # Render gives 750 free instance-hours per workspace per month, shared
+          # across all 3 apps. Combined windows below = 23 hrs/day -> 23*31 = 713
+          # hrs in the longest months, ~37 hrs of margin. (13+6+6=25/day was too
+          # tight: 25*31 = 775, over budget in 7 of 12 months.) Edit freely, just
+          # keep an eye on the total if you widen any window.
+          APPS = [
+              {"name": "bikrante (main)",  "url": "https://bikrante.onrender.com/",     "start": 9,  "end": 20},
+              {"name": "college-ubz8",     "url": "https://college-ubz8.onrender.com/", "start": 10, "end": 16},
+              {"name": "sahayog-j6ns",     "url": "https://sahayog-j6ns.onrender.com/", "start": 10, "end": 16},
+          ]
+
+          # Current time in Nepal (UTC+5:45) -- avoids depending on system tzdata
+          utc_now = datetime.datetime.now(datetime.timezone.utc)
+          nepal_now = utc_now + datetime.timedelta(hours=5, minutes=45)
+          hour = nepal_now.hour
+
+          print(f"UTC now:   {utc_now:%Y-%m-%d %H:%M:%S}")
+          print(f"Nepal now: {nepal_now:%Y-%m-%d %H:%M:%S}  (hour={hour})")
+          print("-" * 60)
+
+          def ping(name, url):
+              req = urllib.request.Request(
+                  url,
+                  method="GET",
+                  headers={"User-Agent": "Mozilla/5.0 (compatible; render-keepalive-bot)"},
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as resp:
+                      print(f"  [OK]   {name} -> HTTP {resp.status}")
+                      return True
+              except urllib.error.HTTPError as e:
+                  # Server answered (even with an error status), so the app is awake
+                  print(f"  [OK]   {name} -> HTTP {e.code} (app responded)")
+                  return True
+              except Exception as e:
+                  print(f"  [FAIL] {name} -> {type(e).__name__}: {e}")
+                  return False
+
+          pinged = 0
+          for app in APPS:
+              in_window = app["start"] <= hour < app["end"]
+              window = f'{app["start"]:02d}:00-{app["end"]:02d}:00'
+              if in_window:
+                  print(f"{app['name']} is in its active window ({window}). Pinging...")
+                  ping(app["name"], app["url"])
+                  pinged += 1
+              else:
+                  print(f"{app['name']} is outside its active window ({window}). Skipping.")
+
+          print("-" * 60)
+          print(f"Done: {pinged}/{len(APPS)} app(s) pinged this run.")

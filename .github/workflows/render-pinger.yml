@@ -2,11 +2,29 @@ name: Keep Render Apps Awake
 
 on:
   schedule:
-    # Every 5 minutes, 24/7. GitHub's scheduler is best-effort and can slip by
-    # several minutes under load, so we ping well inside Render's 15-min sleep
-    # window rather than right up against it.
-    - cron: '*/5 * * * *'
+    # Hourly, NOT every 5 minutes -- and that's deliberate. Here's why:
+    #
+    # REASON: GitHub's `schedule` trigger is best-effort and aggressively
+    # throttles high-frequency crons. With `*/5 * * * *` this workflow only
+    # actually ran ~5 times/day with 2-6 hour gaps between runs (observed via
+    # the Actions API, Sep 24-29 2026 -- e.g. 06:44, 01:00, 21:16(+1d), 15:18,
+    # 07:04 UTC instead of the expected 288 runs/day). Render's free tier
+    # sleeps an app after 15 minutes without traffic, so a ping that arrives
+    # every few hours cannot keep anything awake -- the apps still cold-start.
+    #
+    # FIX: schedule coarsely (hourly crons are honoured far more reliably --
+    # compare stats.yml `0 */6` and snake.yml `0 */12`, which both run on time)
+    # and let EACH run do the frequent pinging itself: the job below loops
+    # every 5 minutes for ~50 minutes, re-checking the Nepal-time windows on
+    # every round. Even if the scheduler slips, each successful run covers
+    # ~50 of 60 minutes instead of a single lonely ping.
+    - cron: '0 * * * *'
   workflow_dispatch:   # lets you trigger a test run manually from the Actions tab
+    inputs:
+      minutes:
+        description: 'How long to keep pinging (minutes)'
+        required: false
+        default: '50'
 
 permissions:
   contents: read
@@ -14,40 +32,51 @@ permissions:
 jobs:
   ping-apps:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    # 60 min because the job now lives for ~50 min by design (see above),
+    # not because anything is slow: one ping round takes seconds.
+    timeout-minutes: 60
     steps:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.13'
 
-      - name: Check Nepal time and ping apps in their active windows
+      - name: Ping apps in their active windows (Nepal time)
         shell: python
+        env:
+          # Manual runs can shorten this (e.g. minutes=5) for a quick test.
+          PING_MINUTES: ${{ inputs.minutes || '50' }}
+          PING_INTERVAL_SECONDS: '300'
         run: |
           import datetime
+          import os
+          import time
           import urllib.request
           import urllib.error
 
           # ---- One line per app: name, URL, active-hours window (Nepal time, 24h) ----
           # Render gives 750 free instance-hours per workspace per month, shared
           # across all 3 apps. Combined windows below = 23 hrs/day -> 23*31 = 713
-          # hrs in the longest months, ~37 hrs of margin. (13+6+6=25/day was too
+          # hrs in the longest months, ~37 hrs of margin. (13+6=25/day was too
           # tight: 25*31 = 775, over budget in 7 of 12 months.) Edit freely, just
           # keep an eye on the total if you widen any window.
+          # NOTE: looping more often does NOT cost extra instance-hours -- an
+          # awake app burns hours whether pinged once or 100x; only the windows
+          # matter for the budget.
           APPS = [
               {"name": "bikrante (main)",  "url": "https://bikrante.onrender.com/",     "start": 9,  "end": 20},
               {"name": "college-ubz8",     "url": "https://college-ubz8.onrender.com/", "start": 10, "end": 16},
               {"name": "sahayog-j6ns",     "url": "https://sahayog-j6ns.onrender.com/", "start": 10, "end": 16},
           ]
 
-          # Current time in Nepal (UTC+5:45) -- avoids depending on system tzdata
-          utc_now = datetime.datetime.now(datetime.timezone.utc)
-          nepal_now = utc_now + datetime.timedelta(hours=5, minutes=45)
-          hour = nepal_now.hour
+          INTERVAL_SECONDS = int(os.environ.get("PING_INTERVAL_SECONDS") or 300)
+          DURATION_SECONDS = int(os.environ.get("PING_MINUTES") or 50) * 60
 
-          print(f"UTC now:   {utc_now:%Y-%m-%d %H:%M:%S}")
-          print(f"Nepal now: {nepal_now:%Y-%m-%d %H:%M:%S}  (hour={hour})")
-          print("-" * 60)
+          def nepal_now():
+              # Current time in Nepal (UTC+5:45) -- avoids depending on system tzdata.
+              # Recomputed every round so windows flip correctly mid-run.
+              utc_now = datetime.datetime.now(datetime.timezone.utc)
+              return utc_now + datetime.timedelta(hours=5, minutes=45)
 
           def ping(name, url):
               req = urllib.request.Request(
@@ -67,16 +96,32 @@ jobs:
                   print(f"  [FAIL] {name} -> {type(e).__name__}: {e}")
                   return False
 
-          pinged = 0
-          for app in APPS:
-              in_window = app["start"] <= hour < app["end"]
-              window = f'{app["start"]:02d}:00-{app["end"]:02d}:00'
-              if in_window:
-                  print(f"{app['name']} is in its active window ({window}). Pinging...")
-                  ping(app["name"], app["url"])
-                  pinged += 1
-              else:
-                  print(f"{app['name']} is outside its active window ({window}). Skipping.")
+          deadline = time.monotonic() + DURATION_SECONDS
+          round_no = 0
+          ok = 0
+          attempted = 0
+
+          while True:
+              round_no += 1
+              now = nepal_now()
+              hour = now.hour
+              print(f"[round {round_no}] Nepal time: {now:%Y-%m-%d %H:%M:%S} (hour={hour})")
+              for app in APPS:
+                  in_window = app["start"] <= hour < app["end"]
+                  window = f'{app["start"]:02d}:00-{app["end"]:02d}:00'
+                  if in_window:
+                      print(f"  Pinging {app['name']} (window {window})...")
+                      attempted += 1
+                      if ping(app["name"], app["url"]):
+                          ok += 1
+                  else:
+                      print(f"  Skipping {app['name']} (outside window {window}).")
+              remaining = deadline - time.monotonic()
+              if remaining <= 0:
+                  break
+              time.sleep(min(INTERVAL_SECONDS, remaining))
 
           print("-" * 60)
-          print(f"Done: {pinged}/{len(APPS)} app(s) pinged this run.")
+          print(f"Done: {ok}/{attempted} successful ping(s) over {round_no} round(s).")
+          with open(os.environ.get("GITHUB_STEP_SUMMARY", os.devnull), "a") as f:
+              f.write(f"Keepalive run: {ok}/{attempted} successful ping(s) over {round_no} round(s).\n")
